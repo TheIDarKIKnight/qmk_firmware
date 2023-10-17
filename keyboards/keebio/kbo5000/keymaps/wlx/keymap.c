@@ -50,9 +50,15 @@ bool encoder_update_user(uint8_t index, bool clockwise) {
         }
     } else if (index == RIGHT_HALF_ENC2) {
         if (clockwise) {
-            tap_code(LALT(KC_TAB));
-        } else {
+            register_code(KC_LALT);
             tap_code(KC_TAB);
+            unregister_code(KC_LALT);
+        } else {
+            register_code(KC_LSFT);
+            register_code(KC_LALT);
+            tap_code(KC_TAB);
+            unregister_code(KC_LALT);
+            unregister_code(KC_LSFT);
         }
     }
     return false;
