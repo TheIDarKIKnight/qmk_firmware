@@ -50,7 +50,7 @@ bool encoder_update_user(uint8_t index, bool clockwise) {
         }
     } else if (index == RIGHT_HALF_ENC2) {
         if (clockwise) {
-            tap_code(A(KC_TAB));
+            tap_code(LALT(KC_TAB));
         } else {
             tap_code(KC_TAB);
         }
