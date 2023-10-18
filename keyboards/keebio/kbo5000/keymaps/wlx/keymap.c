@@ -57,8 +57,8 @@ bool encoder_update_user(uint8_t index, bool clockwise) {
             register_code(KC_LSFT);
             register_code(KC_LALT);
             tap_code(KC_TAB);
-            unregister_code(KC_LALT);
             unregister_code(KC_LSFT);
+            unregister_code(KC_LALT);
         }
     }
     return false;
